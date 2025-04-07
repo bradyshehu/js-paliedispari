@@ -2,13 +2,16 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-const parola = "parola";
-const wordPalindrome = "anna";
-console.log(parola);
-console.log(wordPalindrome);
+const inputWord = prompt(
+  "Inserisci una parola per vedere se é palindroma",
+  "es. anna"
+);
+const fixWord = inputWord.toLowerCase();
+console.log(fixWord);
 
 let reversedWord = [];
 let isWordPalindrome;
+
 function palindromeCheck(word) {
   const wordArray = word.split("");
   console.log(wordArray);
@@ -16,14 +19,11 @@ function palindromeCheck(word) {
   for (let i = 0; i < word.length; i++) {
     const currentLetter = word[i];
     reversedWord.unshift(currentLetter);
-    if (word[i] === reversedWord[i]) {
-      isWordPalindrome = true;
-    } else {
-      isWordPalindrome = false;
-    }
+
+    isWordPalindrome = word[i] === reversedWord[i] ? true : false;
   }
   console.log(reversedWord);
   return isWordPalindrome;
 }
-palindromeCheck(parola);
+palindromeCheck(fixWord);
 console.log(isWordPalindrome);
