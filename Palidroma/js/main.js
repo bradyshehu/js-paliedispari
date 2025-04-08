@@ -9,10 +9,9 @@ const inputWord = prompt(
 const fixWord = inputWord.toLowerCase();
 console.log(fixWord);
 
-let reversedWord = [];
-let isWordPalindrome;
-
 function palindromeCheck(word) {
+  let reversedWord = [];
+  let isWordPalindrome;
   const wordArray = word.split("");
   console.log(wordArray);
   reversedWord = [];
@@ -26,4 +25,4 @@ function palindromeCheck(word) {
   return isWordPalindrome;
 }
 palindromeCheck(fixWord);
-console.log(isWordPalindrome);
+console.log(palindromeCheck(fixWord));

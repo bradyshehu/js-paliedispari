@@ -20,13 +20,11 @@ function sumCheck(num1, num2) {
 const playerNumber = parseInt(prompt("Inserisci un numero da uno a cinque"));
 console.log(playerNumber);
 
-randomNumberUpTo(5);
-
-sumCheck(playerNumber, pcNumber);
-
 if (playerNumber > 0 && playerNumber < 6 && playerNumber !== isNaN) {
+  randomNumberUpTo(5);
   const playerChoice = prompt("Scegli pari o dispari");
   const sum = playerNumber + pcNumber;
+  sumCheck(playerNumber, pcNumber);
   console.log(sum);
   console.log(isSumEven);
   (playerChoice === "pari" && isSumEven === true) ||
